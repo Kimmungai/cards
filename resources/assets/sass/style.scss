@@ -10,3 +10,16 @@
 html, body{
 
 }
+.ribbon{
+  height: 2px;
+  background-color: $side-menu-bg;
+  overflow: hidden;
+}
+.avatar{
+  width: 80%;
+  margin: 0 auto;
+}
+.avatar img{
+  max-width: 100%;
+  height: auto;
+}
