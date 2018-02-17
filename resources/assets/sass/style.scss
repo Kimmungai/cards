@@ -42,14 +42,18 @@ html, body{
   list-style-type: none;
   text-align: center;
 }
+.working-area{
+  overflow: hidden;
+}
 .working-area h1{
   text-align: center;
 }
 .card{
   width: 70%;
   margin: 0 auto;
+  margin-bottom: 10%;
 }
-.desk {
+/*.desk {
   background: #ccc;
   height: 300px;
   background: url('/img/desk_wooden.jpg');
@@ -123,4 +127,108 @@ html, body{
 }
 .desk ul li:nth-child(1):before a{
   background-color: #2e4a86;
+}*/
+.desk {
+  background: #ccc;
+  background: url('/img/desk_wooden.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  transition: .5s;
+  position: relative;
+  transform:  rotateZ(1deg) rotateY(-5deg) rotateX(-10deg) skew(-1deg) translate(0,0);
+}
+.desk:before{
+  content: '@';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #000;
+  transition: .5s;
+  transform:  rotate(0deg) skewY(-45deg);
+  color: #fff;
+  text-align: center;
+}
+.desk:after{
+  content: 'office table';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #000;
+  transition: .5s;
+  transform:  rotate(0deg) skewX(-45deg);
+  color: #fff;
+  text-align: center;
+}
+.desk h2{
+  text-align: center;
+  color: #fff;
+}
+.desk ul{
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    margin-right: 2em !important;
+}
+.desk ul li{
+    list-style: none;
+    margin: 0 40px;
+}
+.desk ul li a .fa{
+    font-size: 40px;
+    color: #262626;
+    line-height: 80px;
+    transition: .5s;
+}
+.desk ul li a{
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  text-align: center;
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+  transition: .5s;
+  box-shadow: -20px 20px 10px rgba(0,0,0,.5);
+}
+.desk ul li a:before{
+  content: 'cv';
+  position: absolute;
+  top: 10px;
+  left: -20px;
+  height: 100%;
+  width: 20px;
+  background: #b1b1b1;
+  transition: .5s;
+  transform:  rotate(0deg) skewY(-45deg);
+}
+.desk ul li a:after{
+  content: 'web';
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: #b1b1b1;
+  transition: .5s;
+  transform:  rotate(0deg) skewX(-45deg);
+}
+.desk ul li a:hover{
+  transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+  box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+}
+
+.desk ul li:nth-child(1) a{
+  background-color: #3b5999;
+}
+.desk ul li:nth-child(1):before a{
+  background-color: #2e4a86;
+}
+.mb-3{
+  margin-bottom: 3em !important;
 }
