@@ -10001,7 +10001,7 @@ a.text-dark:focus {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #0f0;
+  background-color: "";
   overflow-x: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -10012,7 +10012,7 @@ a.text-dark:focus {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #fff;
+  color: #000;
   display: block;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -10038,7 +10038,7 @@ body {
 
 .ribbon {
   height: 2px;
-  background-color: #0f0;
+  background-color: "";
   overflow: hidden;
 }
 
@@ -10167,18 +10167,16 @@ body {
   -webkit-transition: .5s;
   transition: .5s;
   position: relative;
-  -webkit-transform: rotateZ(1deg) rotateY(-5deg) rotateX(-10deg) skew(-1deg) translate(0, 0);
-          transform: rotateZ(1deg) rotateY(-5deg) rotateX(-10deg) skew(-1deg) translate(0, 0);
 }
 
 .desk:before {
-  content: '@';
+  content: '';
   position: absolute;
   top: 10px;
   left: -20px;
   height: 100%;
   width: 20px;
-  background: #000;
+  background: #333;
   -webkit-transition: .5s;
   transition: .5s;
   -webkit-transform: rotate(0deg) skewY(-45deg);
@@ -10292,5 +10290,27 @@ body {
 
 .mb-3 {
   margin-bottom: 3em !important;
+}
+
+/*shelves*/
+
+.shelf {
+  border-top-left-radius: 5px;
+  background: url("/img/drawer_wooden.jpg");
+  margin: 0.5em auto;
+}
+
+.shelf:hover {
+  -webkit-transform: perspective(1000px) rotate(0deg) skew(0deg) translate(2px, 2px);
+          transform: perspective(1000px) rotate(0deg) skew(0deg) translate(2px, 2px);
+  cursor: pointer;
+}
+
+.shelf h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  line-height: 2em;
 }
 

@@ -14,6 +14,6 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/office', function () {
+Route::get('/', function () {
     return view('virtual_office');
 });
