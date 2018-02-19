@@ -2,8 +2,31 @@
 @section('desk')
 <section class="working-area">
   <h1>Cards Shelf</h1>
-  <article class="card">
-    sd
+  <article class="container card">
+    <h2>Peter <span class="text-danger">Kimani</span></h2>
+    <h3>web/graphic designer</h3>
+    <div class="row">
+      <div class="col-md-1 no-padding">
+        <div class="bar1"></div>
+      </div>
+      <div class="col-md-2 no-padding">
+        <div class="qr"></div>
+      </div>
+      <div class="col-md-9 no-padding">
+        <div class="bar2 bg-danger"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"></div>
+      <div class="col-md-6 card-info">
+        <ul>
+          <li><span class="fa fa-phone-square"> (+81)-803-1568-951</span></li>
+          <li><span class="fa fa-envelope"> admin@webdesignerscenter.com</span></li>
+          <li><span class="fa fa-map-marker"> Tokyo koganei shi kajinocho 1-9-32</span></li>
+          <li><span class="fa fa-globe"> https://webdesignerscenter.com/</span></li>
+        </ul>
+      </div>
+    </div>
   </article>
 </section>
 <section class="border desk">
