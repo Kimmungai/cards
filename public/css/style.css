@@ -9997,7 +9997,7 @@ a.text-dark:focus {
 .sidenav {
   height: 100%;
   width: 250px;
-  position: fixed;
+  /*position: fixed;*/
   z-index: 1;
   top: 0;
   left: 0;
@@ -10216,6 +10216,7 @@ body {
 }*/
 
 .desk {
+  width: 90%;
   background: #ccc;
   background: url("/img/desk_wooden.jpg");
   background-size: cover;
@@ -10223,6 +10224,7 @@ body {
   -webkit-transition: .5s;
   transition: .5s;
   position: relative;
+  margin: 0 auto;
 }
 
 .desk:before {
@@ -10281,7 +10283,7 @@ body {
 .desk ul li a .fa {
   font-size: 40px;
   color: #262626;
-  line-height: 80px;
+  line-height: 60px;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -10289,8 +10291,8 @@ body {
 .desk ul li a {
   position: relative;
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: #fff;
   text-align: center;
   -webkit-transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0, 0);

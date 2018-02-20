@@ -33,30 +33,30 @@
   <h2>Desk</h2>
   <ul>
     <li>
-      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
     </li>
     <li>
-      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
     </li>
     <li>
-      <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
     </li>
     <li>
-      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
     </li>
   </ul>
   <ul>
     <li>
-      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
     </li>
     <li>
-      <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
     </li>
     <li>
-      <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
     </li>
     <li>
-      <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
     </li>
   </ul>
   <ul class="mb-3">

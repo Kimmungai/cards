@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="ribbon"></div>
-    <div class="container">
+    <div class="ribbon bg-success"></div>
+    <div class="container mt-3">
       <div class="row">
-        <div class="col-md-3 ">
-          <div id="mySidenav" class="sidenav border">
+        <div class="col-md-3">
+          <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="shelf">
               <h2> Cards</h2>
