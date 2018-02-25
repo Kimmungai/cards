@@ -28,6 +28,20 @@
       </div>
     </div>
   </article>
+<div class="row controls">
+  <div class="col-md-3">
+    <a href="#"><span class="fa fa-print"></span> Print</a>
+  </div>
+  <div class="col-md-3">
+    <a href="#"><span class="fa fa-telegram"></span> Mail</a>
+  </div>
+  <div class="col-md-3">
+    <a href="#"><span class="fa fa-share-alt"></span> Share</a>
+  </div>
+  <div class="col-md-3">
+    <a href="#"><span class="fa fa-times"></span> close</a>
+  </div>
+</div>
 </section>
 <section class="border desk">
   <h2>Desk</h2>

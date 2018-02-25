@@ -51,7 +51,7 @@ html, body{
 .card{
   width: 70%;
   margin: 0 auto;
-  margin-bottom: 10%;
+  /*margin-bottom: 10%;*/
   border-radius: 0;
   background: #000;
 }
@@ -101,6 +101,10 @@ html, body{
   list-style: none;
   font-size: 0.8em;
   margin-bottom: 0.2em;
+}
+.working-area .controls{
+  text-align: center;
+  margin: 2% 0;
 }
 /*.desk {
   background: #ccc;
