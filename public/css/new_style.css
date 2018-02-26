@@ -1,0 +1,93 @@
+header{
+  background-color: #373737;
+  overflow: hidden;
+}
+header ul{
+  line-height: 4em;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+  display: flex;
+  float: left;
+}
+header ul li{
+  text-transform: uppercase;
+  padding-right: 2em;
+}
+header ul li a, a:hover{
+  color: inherit;
+}
+.brand {
+  text-decoration: none !important;
+  font-size: 1.4em;
+}
+aside{
+  background-color: #f2f2ea;
+  height: 500px;
+}
+aside ul{
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+aside ul a{
+  color: inherit;
+  text-decoration: none !important;
+}
+aside ul li{
+  line-height: 3em;
+}
+aside .shelf-icons{
+  width: 20%;
+  text-align: center;
+}
+aside .shelf-icons .active{
+  background-color: #de6262;
+  color: #fff;
+}
+aside .shelf-icons li{
+  border-bottom: 1px solid #d4d5d0;
+}
+aside .shelves{
+  width: 80%;
+}
+aside .shelves li{
+  padding-left: 1em;
+  border-bottom: 1px solid #d4d5d0;
+  border-left: 1px solid #d4d5d0;
+}
+aside .add-shelf{
+  text-align: center;
+  text-transform: uppercase;
+}
+aside .add-shelf a{
+  color: inherit;
+}
+main{
+  background-color: #f2f2f0;
+  height: 500px;
+  border-top: 5px solid #df6260;
+  border-left: 1px solid #d4d5d0;
+}
+main h1{
+  background-color: #f7f6f2;
+  border-bottom: 1px solid #d4d5d0;
+  line-height: 1.5em;
+}
+main h1 .fa-book{
+  margin-left: 1em;
+  margin-right: 0.2em;
+}
+main h1 .tag{
+  margin-right: 1em;
+  font-size: 0.5em;
+}
+.no-padding{
+  padding: 0 !important;
+}
+.pl1{
+  padding-left: 1em !important;
+}
