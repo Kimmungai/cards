@@ -1,8 +1,24 @@
 header{
   background-color: #373737;
-  overflow: hidden;
+  text-transform: uppercase;
 }
-header ul{
+header .navbar-toggler{
+  background-color: #fff;
+}
+header .nav-item{
+  padding-right: 2em;
+}
+header li a:hover{
+  text-decoration: underline !important;
+}
+header li a{
+  opacity: 0.6;
+}
+header .active{
+  opacity: 1 !important;
+  font-weight: bold;
+}
+/*header ul{
   line-height: 4em;
   margin: 0;
   padding: 0;
@@ -17,7 +33,7 @@ header ul li{
 }
 header ul li a, a:hover{
   color: inherit;
-}
+}*/
 .brand {
   text-decoration: none !important;
   font-size: 1.4em;
@@ -80,14 +96,95 @@ main h1{
 main h1 .fa-book{
   margin-left: 1em;
   margin-right: 0.2em;
+  font-size: 0.8em;
 }
 main h1 .tag{
   margin-right: 1em;
   font-size: 0.5em;
+}
+main .card{
+  width: 65%;
+  margin: 0 auto;
+  border-radius: 0;
+  background: #000;
+}
+main .card h2{
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  color: #fff;
+  font-size: 2em;
+  padding-right: 0.4em;
+  text-transform: uppercase;
+}
+main .card h3{
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  color: #fff;
+  font-size: 0.8em;
+  padding-right: 1em;
+  text-transform: uppercase;
+}
+main .qr{
+  width: 90%;
+  height: 4em;
+  background-color: #fff;
+  margin: 1em auto 0 auto;
+  background: url('/img/qr.png');
+  background-size: cover;
+  background-position: 50% 50%;
+}
+main .bar1{
+  height: 1.2em;
+  background-color: #fff;
+  margin: 2.3em 0 0 0;
+}
+main .bar2{
+  height: 1.2em;
+  margin: 2.3em 0 0 0;
+}
+main .card-details ul{
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  list-style: none;
+  margin-bottom: 0.2em;
+}
+main .controls{
+  text-align: center;
+  margin: 2% 0;
 }
 .no-padding{
   padding: 0 !important;
 }
 .pl1{
   padding-left: 1em !important;
+}
+.pl2{
+  padding-left: 2em !important;
+}
+.pl3{
+  padding-left: 3em !important;
+}
+.pl4{
+  padding-left: 4em !important;
+}
+.pl5{
+  padding-left: 5em !important;
+}
+.pr1{
+  padding-right: 1em !important;
+}
+.pr2{
+  padding-right: 2em !important;
+}
+.pr3{
+  padding-right: 3em !important;
+}
+.pr4{
+  padding-right: 4em !important;
+}
+.pr5{
+  padding-right: 5em !important;
 }
