@@ -83,19 +83,19 @@
               <h2>Peter <span class="text-danger">Kimani</span></h2>
               <h3>web/graphic designer</h3>
               <div class="row">
-                <div class="col-md-1 no-padding">
+                <!--<div class="col-sm-1 no-padding">-->
                   <div class="bar1"></div>
-                </div>
-                <div class="col-md-2 no-padding">
+                <!--</div>-->
+                <!--<div class="col-sm-2 no-padding">-->
                   <div class="qr"></div>
-                </div>
-                <div class="col-md-9 no-padding">
+                <!--</div>-->
+                <!--<div class="col-sm-9 no-padding">-->
                   <div class="bar2 bg-danger"></div>
-                </div>
+                <!--</div>-->
               </div>
               <div class="row">
-                <div class="col-md-6"></div>
-                <div class="col-md-6 card-details">
+                <div class="col-sm-6"></div>
+                <div class="col-sm-6 card-details">
                   <ul>
                     <li><span class="fa fa-phone-square"> (+81)-803-1568-951</span></li>
                     <li><span class="fa fa-envelope"> admin@webdesignerscenter.com</span></li>
@@ -106,19 +106,64 @@
               </div>
             </article>
             <div class="row controls">
-              <div class="col-md-3">
-                <a class="btn btn-info" href="#"><span class="fa fa-print"></span> Print</a>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-print"></span> Print</a>
               </div>
-              <div class="col-md-3">
-                <a class="btn btn-info" href="#"><span class="fa fa-telegram"></span> Mail</a>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
               </div>
-              <div class="col-md-3">
-                <a class="btn btn-info" href="#"><span class="fa fa-share-alt"></span> Share</a>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
               </div>
-              <div class="col-md-3">
-                <a class="btn btn-info" href="#"><span class="fa fa-times"></span> close</a>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
               </div>
             </div>
+            <section class="border desk">
+              <h2>Desk</h2>
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul class="mb-3">
+                <li>
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </section>
           </main>
         </div>
       </div>
