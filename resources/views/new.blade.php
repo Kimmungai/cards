@@ -5,7 +5,7 @@
     <link  href="/css/bootstrap.min.css" rel="stylesheet">
     <link  href="/css/font-awesome.min.css" rel="stylesheet">
     <link  href="/css/new_style.css" rel="stylesheet">
-    <title>Virtual offiece</title>
+    <title>Virtual office</title>
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js"></script>
   </head>
@@ -64,16 +64,44 @@
             <ul class="shelf-icons">
               <li class="active"><a href="#"><i class="fa fa-book"></i></a></li>
               <li><a href="#"><i class="fa fa-file"></i></a></li>
-              <li><a href="#"><i class="fa fa-folder"></i></a></li>
+              <li><a href="#"><i class="fa fa-envelope"></i></a></li>
               <li><a href="#"><i class="fa fa-globe"></i></a></li>
+              <li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>
             </ul>
             <ul class="shelves">
               <li><a href="#">cards</a></li>
               <li><a href="#">cvs</a></li>
               <li><a href="#"> letters</a></li>
               <li><a href="#"> websites</a></li>
+              <li><a class="text-danger" href="#"> new shelf</a></li>
             </ul>
-            <div class="add-shelf"> <a href="#"><i class="fa fa-plus-circle"></i> new shelf</a></div>
+            <section class="desk">
+              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul class="mb3">
+                <li>
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </section>
           </aside>
         </div>
         <div class="col-md-9 no-padding">
@@ -119,51 +147,6 @@
                 <a class="" href="#"><span class="fa fa-times"></span> close</a>
               </div>
             </div>
-            <section class="border desk">
-              <h2>Desk</h2>
-              <ul>
-                <li>
-                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
-                </li>
-              </ul>
-              <ul>
-                <li>
-                  <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-gift" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                </li>
-              </ul>
-              <ul class="mb-3">
-                <li>
-                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
-                </li>
-                <li>
-                  <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                </li>
-              </ul>
-            </section>
           </main>
         </div>
       </div>
