@@ -153,11 +153,16 @@ aside .add-shelf a{
   box-shadow: -50px 50px 50px rgba(0,0,0,.5);
 }
 
- .desk ul li:nth-child(1) a{
+ /*.desk ul li:nth-child(1) a{
   background-color: #3b5999;
 }
  .desk ul li:nth-child(1):before a{
   background-color: #2e4a86;
+}*/
+.desk  .active a{
+ transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+ box-shadow: -50px 50px 50px rgba(0,0,0,.5);
+ background-color: #d9534f !important;
 }
 main{
   background-color: #f2f2f0;
@@ -179,49 +184,48 @@ main h1 .tag{
   margin-right: 1em;
   font-size: 0.5em;
 }
-main .card{
-  width: 65%;
+main .biz-card{
+  /*width: 65%;*/
+  width: 560px !important;
   margin: 0 auto;
   border-radius: 0;
   background: #000;
 }
-main .card h2{
+main .biz-card h2{
   margin: 0;
   padding: 0;
-  text-align: right;
   color: #fff;
   font-size: 2em;
 
   text-transform: uppercase;
 }
-main .card h3{
+main .biz-card h3{
   margin: 0;
   padding: 0;
-  text-align: right;
   color: #fff;
   font-size: 0.8em;
   padding-right: 1em;
   text-transform: uppercase;
 }
 main .qr{
-  width: 20%;
-  height: 4em;
+  width: 89px;
+  height: 90px;
   background-color: #fff;
-  margin: 1em auto 0 auto;
-  background: url('/img/qr.png');
+  margin: 0 auto 0 auto;
+  background: url('/img/qr.png') no-repeat center;
   background-size: cover;
   background-position: 50% 50%;
 }
 main .bar1{
-  width: 1em;
-  height: 1em;
+  width: 50px;
+  height: 18px;
   background-color: #fff;
-  margin: 2.3em 0 0.1em 0;
+  margin:36px 1px 0 0;
 }
 main .bar2{
-  width: 68%;
-  height: 1.2em;
-  margin: 2.3em 0 0 0.1em;
+  width: 400px;
+  height: 18px;
+  margin: 36px 0 0 1px;
 }
 main .card-details ul{
   margin: 0;
@@ -285,4 +289,22 @@ main .controls a{
 }
 .mb5{
   margin-bottom: 5em !important;
+}
+.desk .A a:before{
+ content: 'A';
+}
+.desk .B a:before{
+ content: 'B';
+}
+.desk .C a:before{
+ content: 'C';
+}
+.desk .D a:before{
+ content: 'D';
+}
+.desk .E a:before{
+ content: 'E';
+}
+.desk .F a:before{
+ content: 'F';
 }

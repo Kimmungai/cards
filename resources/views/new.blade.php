@@ -6,11 +6,12 @@
     <link  href="/css/font-awesome.min.css" rel="stylesheet">
     <link  href="/css/new_style.css" rel="stylesheet">
     <title>Virtual office</title>
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/angular.min.js"></script>
   </head>
   <body>
-    <div class="container"><!--start container-->
+    <div ng-app="" class="container"><!--start container-->
       <div class="row">
         <div class="col-md-12 no-padding">
           <header>
@@ -40,7 +41,7 @@
                     <a class="nav-link text-white" href="#">settings</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       peter njau
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -78,26 +79,26 @@
             <section class="desk">
               <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul>
-                <li>
+                <li class="A">
                   <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
                 </li>
-                <li>
+                <li class="B active">
                   <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
                 </li>
               </ul>
               <ul>
-                <li>
+                <li class="C">
                   <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
                 </li>
-                <li>
+                <li class="D">
                   <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
                 </li>
               </ul>
               <ul class="mb3">
-                <li>
+                <li class="E">
                   <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
-                <li>
+                <li class="F">
                   <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
               </ul>
@@ -107,23 +108,22 @@
         <div class="col-md-9 no-padding">
           <main>
             <h1><i class="fa fa-book"></i> Cards shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
-            <article class="container card">
+            <article class="container biz-card">
               <h2>Peter <span class="text-danger">Kimani</span></h2>
               <h3>web/graphic designer</h3>
               <div class="row">
                 <!--<div class="col-sm-1 no-padding">-->
-                  <div class="bar1"></div>
+                  <div class="bar2 bg-danger"></div>
                 <!--</div>-->
                 <!--<div class="col-sm-2 no-padding">-->
                   <div class="qr"></div>
                 <!--</div>-->
                 <!--<div class="col-sm-9 no-padding">-->
-                  <div class="bar2 bg-danger"></div>
+                  <div class="bar1"></div>
                 <!--</div>-->
               </div>
-              <div class="row">
-                <div class="col-sm-6"></div>
-                <div class="col-sm-6 card-details">
+                <!--<div class="col-sm-6"></div>-->
+                <div class="card-details">
                   <ul>
                     <li><span class="fa fa-phone-square"> (+81)-803-1568-951</span></li>
                     <li><span class="fa fa-envelope"> admin@webdesignerscenter.com</span></li>
@@ -131,7 +131,6 @@
                     <li><span class="fa fa-globe"> https://webdesignerscenter.com/</span></li>
                   </ul>
                 </div>
-              </div>
             </article>
             <div class="row controls">
               <div class="col-xs-3 ml-5">
