@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="App" ng-controller="Ctrl">
   <head>
     <meta charset="utf-8">
     <link  href="/css/bootstrap.min.css" rel="stylesheet">
@@ -8,10 +8,10 @@
     <title>Virtual office</title>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   </head>
   <body>
-    <div ng-app="" class="container"><!--start container-->
+    <div  class="container"><!--start container-->
       <div class="row">
         <div class="col-md-12 no-padding">
           <header>
@@ -63,7 +63,7 @@
         <div class="col-md-3 no-padding">
           <aside>
             <ul class="shelf-icons">
-              <li class="active"><a href="#"><i class="fa fa-book"></i></a></li>
+              <li><a href="#"><i class="fa fa-book"></i></a></li>
               <li><a href="#"><i class="fa fa-file"></i></a></li>
               <li><a href="#"><i class="fa fa-envelope"></i></a></li>
               <li><a href="#"><i class="fa fa-globe"></i></a></li>
@@ -108,9 +108,9 @@
         <div class="col-md-9 no-padding">
           <main>
             <h1><i class="fa fa-book"></i> Cards shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
-            <article class="container biz-card">
-              <h2>Peter <span class="text-danger">Kimani</span></h2>
-              <h3>web/graphic designer</h3>
+            <article class="container biz-card" >
+              <h2>@{{first_name}} <span  class="text-danger">@{{second_name}}</span></h2>
+              <h3>@{{title}}</h3>
               <div class="row">
                 <!--<div class="col-sm-1 no-padding">-->
                   <div class="bar2 bg-danger"></div>
@@ -125,10 +125,10 @@
                 <!--<div class="col-sm-6"></div>-->
                 <div class="card-details">
                   <ul>
-                    <li><span class="fa fa-phone-square"> (+81)-803-1568-951</span></li>
-                    <li><span class="fa fa-envelope"> admin@webdesignerscenter.com</span></li>
-                    <li><span class="fa fa-map-marker"> Tokyo koganei shi kajinocho 1-9-32</span></li>
-                    <li><span class="fa fa-globe"> https://webdesignerscenter.com/</span></li>
+                    <li><span class="fa fa-phone-square"> @{{telephone}}</span></li>
+                    <li><span class="fa fa-envelope"> @{{email}}</span></li>
+                    <li><span class="fa fa-map-marker"> @{{address}}</span></li>
+                    <li><span class="fa fa-globe"> @{{website}}</span></li>
                   </ul>
                 </div>
             </article>
@@ -150,5 +150,15 @@
         </div>
       </div>
     </div><!--end container-->
+    <script>
+    var app = angular.module('App', []);
+      app.controller('Ctrl', function($scope) {
+        $scope.first_name= "John";
+        $scope.second_name= "Doe";
+        $scope.title= "software engineer/ designer";
+        $scope.telephone= "0724942245";
+        $scope.email= "0724942245";
+      });
+    </script>
   </body>
 </html>
