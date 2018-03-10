@@ -8,7 +8,7 @@
     <title>Virtual office</title>
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="/js/angular.min.js"></script>
   </head>
   <body>
     <div  class="container"><!--start container-->
@@ -61,54 +61,100 @@
       </div>
       <div class="row">
         <div class="col-md-3 no-padding">
-          <aside>
+          <aside ng-cloak>
             <ul class="shelf-icons">
-              <li><a href="#"><i class="fa fa-book"></i></a></li>
-              <li><a href="#"><i class="fa fa-file"></i></a></li>
-              <li><a href="#"><i class="fa fa-envelope"></i></a></li>
-              <li><a href="#"><i class="fa fa-globe"></i></a></li>
-              <li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>
+              <li ng-class="active_shelf==1 ? 'active' : 'inactive'" ng-click="active_shelf=1;shelf_items=1"><a href="#"><i class="fa fa-book"></i></a></li>
+              <li ng-class="active_shelf==2 ? 'active' : 'inactive'" ng-click="active_shelf=2;shelf_items=2"><a href="#"><i class="fa fa-file"></i></a></li>
+              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-envelope"></i></a></li>
+              <li ng-class="active_shelf==4 ? 'active' : 'inactive'" ng-click="active_shelf=4;shelf_items=4"><a href="#"><i class="fa fa-globe"></i></a></li>
+              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
             </ul>
             <ul class="shelves">
-              <li><a href="#">cards</a></li>
-              <li><a href="#">cvs</a></li>
-              <li><a href="#"> letters</a></li>
-              <li><a href="#"> websites</a></li>
-              <li><a class="text-danger" href="#"> new shelf</a></li>
+              <li ng-click="active_shelf=1;shelf_items=1"><a href="#">cards</a></li>
+              <li ng-click="active_shelf=2;shelf_items=2"><a href="#">cvs</a></li>
+              <li ng-click="active_shelf=3;shelf_items=3"><a href="#"> letters</a></li>
+              <li ng-click="active_shelf=4;shelf_items=4"><a href="#"> websites</a></li>
+              <!--<li><a class="text-danger" href="#"> new shelf</a></li>-->
             </ul>
-            <section class="desk">
-              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+            <section class="desk" ng-show="shelf_items==1">
+              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul>
-                <li class="A">
+                <li ng-class="active_card_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="A">
                   <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
                 </li>
-                <li class="B active">
-                  <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
+                <li ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=2" class="B">
+                  <a href="#"><i class="fa fa-plane" aria-hidden="true" title="wamjai"></i></a>
                 </li>
               </ul>
               <ul>
-                <li class="C">
+                <li ng-class="active_card_shelf_item==3 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=3" class="C">
                   <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
                 </li>
-                <li class="D">
+                <li ng-class="active_card_shelf_item==4 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=4" class="D">
                   <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
                 </li>
               </ul>
               <ul class="mb3">
-                <li class="E">
+                <li ng-class="active_card_shelf_item==5 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=5" class="E">
                   <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
-                <li class="F">
+                <li ng-class="active_card_shelf_item==6 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=6" class="F">
                   <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
               </ul>
-            </section>
+            </section><!--end cards shelf items-->
+            <section class="desk" ng-show="shelf_items==2">
+              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> CVs <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+              <ul>
+                <li ng-class="active_cv_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_cv_shelf_item=1" class="A">
+                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                </li>
+                <li ng-class="active_cv_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_cv_shelf_item=2" class="B">
+                  <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul class="mb3">
+                <li ng-class="active_cv_shelf_item==3 ? 'active' : 'inactive'" ng-click="active_cv_shelf_item=3" class="C">
+                  <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </section><!--end cvs shelf items-->
+            <section class="desk" ng-show="shelf_items==3">
+              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Letters <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+              <ul>
+                <li ng-class="active_letter_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_letter_shelf_item=1" class="A">
+                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                </li>
+                <li ng-class="active_letter_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_letter_shelf_item=2" class="B">
+                  <a href="#"><i class="fa fa-plane" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul class="mb3">
+                <li ng-class="active_letter_shelf_item==3 ? 'active' : 'inactive'" ng-click="active_letter_shelf_item=3" class="C">
+                  <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
+                </li>
+                <li ng-class="active_letter_shelf_item==4 ? 'active' : 'inactive'" ng-click="active_letter_shelf_item=4" class="D">
+                  <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </section><!--end letters shelf items-->
+            <section class="desk" ng-show="shelf_items==4">
+              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Websites <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+              <ul class="mb3">
+                <li ng-class="active_website_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_letter_shelf_item=1" class="A">
+                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+            </section><!--end websites shelf items-->
           </aside>
         </div>
-        <div class="col-md-9 no-padding">
-          <main>
-            <h1><i class="fa fa-book"></i> Cards shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
-            <article class="container biz-card" >
+        <div class="col-md-9 no-padding" ng-cloak>
+          <main ng-show="active_shelf==0">
+            <h1><i class="icn fa fa-exclamation-triangle"></i> No open shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+          </main><!--end websites shelf-->
+          <main ng-show="active_shelf==1">
+            <h1><i class="icn fa fa-book"></i> Cards shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+            <article class="container biz-card" ng-show="active_card_shelf_item==1">
               <h2>@{{first_name}} <span  class="text-danger">@{{second_name}}</span></h2>
               <h3>@{{title}}</h3>
               <div class="row">
@@ -132,7 +178,7 @@
                   </ul>
                 </div>
             </article>
-            <div class="row controls">
+            <div class="row controls" ng-show="active_card_shelf_item==1">
               <div class="col-xs-3 ml-5">
                 <a class="" href="#"><span class="fa fa-print"></span> Print</a>
               </div>
@@ -142,11 +188,20 @@
               <div class="col-xs-3 ml-5">
                 <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
               </div>
-              <div class="col-xs-3 ml-5">
+              <div class="col-xs-3 ml-5" ng-click="active_card_shelf_item=0">
                 <a class="" href="#"><span class="fa fa-times"></span> close</a>
               </div>
             </div>
-          </main>
+          </main><!--end cards shelf-->
+          <main ng-show="active_shelf==2">
+            <h1><i class="icn fa fa-file"></i> CVs shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+          </main><!--end cvs shelf-->
+          <main ng-show="active_shelf==3">
+            <h1><i class="icn fa fa-envelope"></i> Letters shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+          </main><!--end letters shelf-->
+          <main ng-show="active_shelf==4">
+            <h1><i class="icn fa fa-globe"></i> Websites shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+          </main><!--end websites shelf-->
         </div>
       </div>
     </div><!--end container-->
@@ -157,7 +212,16 @@
         $scope.second_name= "Doe";
         $scope.title= "software engineer/ designer";
         $scope.telephone= "0724942245";
-        $scope.email= "0724942245";
+        $scope.email= "kimpita9@gmail.com";
+        $scope.address= "Tokyo koganei shi kajinocho 1-9-32";
+        $scope.website= "http://localhost:8000/new";
+        //display variables
+        $scope.active_shelf = 1;
+        $scope.shelf_items = 1;
+        $scope.active_card_shelf_item=1;
+        $scope.active_cv_shelf_item=1;
+        $scope.active_letter_shelf_item=1;
+        $scope.active_website_shelf_item=1;
       });
     </script>
   </body>
