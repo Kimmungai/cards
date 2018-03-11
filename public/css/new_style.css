@@ -242,8 +242,68 @@ main .controls{
 main .controls a{
   color: inherit;
 }
+main .cv{
+  width: 595px;
+  background-color: #fff;
+  margin: 1em auto;
+}
+main .cv dl{
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em 0;
+  overflow: hidden;
+  border-bottom: 2px dotted #4A90E2;
+}
+main .cv dt{
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+main .cv dd{
+  width: 50%;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+main .cv dd ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.8em;
+  text-align: right;
+}
+main .cv h2{
+  font-size: 2.3em;
+}
+main .cv dd li{
+}
+main .cv p{
+  padding-top: 1em;
+}
+main .cv h3{
+  padding-top: 1em;
+  font-size: 1.5em;
+}
+.cv-sec{
+  font-size: 1em;
+  color:#fff;
+  background: #4A90E2;
+  padding: 0.5em;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+.title-addon{
+  font-size: 0.6em;
+}
+.cv-theme-color{
+  color: #4A90E2 !important;
+}
 .no-padding{
   padding: 0 !important;
+}
+.no-border{
+  border: 0!important;
 }
 .pl1{
   padding-left: 1em !important;

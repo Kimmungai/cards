@@ -80,7 +80,7 @@
               <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul>
                 <li ng-class="active_card_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="A">
-                  <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-address-card" aria-hidden="true"></i></a>
                 </li>
                 <li ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=2" class="B">
                   <a href="#"><i class="fa fa-plane" aria-hidden="true" title="wamjai"></i></a>
@@ -195,9 +195,43 @@
           </main><!--end cards shelf-->
           <main ng-show="active_shelf==2">
             <h1><i class="icn fa fa-file"></i> CVs shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+            <article class="cv">
+              <dl>
+                <dt>
+                  <h2 class="cv-theme-color">@{{first_name}} @{{second_name}}</h2>
+                </dt>
+                <dd>
+                  <ul>
+                    <li>@{{email}} <span class="cv-theme-color">EMAIL</span></li>
+                    <li>@{{address}} <span class="cv-theme-color">ADDRESS</span></li>
+                    <li>@{{telephone}} <span class="cv-theme-color">PHONE</span></li>
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <span class="cv-sec">Objective</span>
+                <p>@{{cv_objective}}</p>
+              </dl>
+              <dl>
+                <span class="cv-sec">Experience</span>
+                <h3><span class="cv-theme-color"> @{{cv_experience_title}}</span> <strong class="title-addon">@{{cv_company}}</strong> - <span class="title-addon">@{{cv_company_address}}</span> <i class="title-addon">@{{cv_experience_start_date}} - @{{cv_experience_end_date}}</i></h3>
+                <p>@{{cv_experience_item1}}<br/>@{{cv_experience_item2}}<br/>@{{cv_experience_item3}}</p>
+              </dl>
+              <dl>
+                <span class="cv-sec">Education</span>
+                <h3><span class="cv-theme-color"> @{{cv_education_title}}</span> <strong class="title-addon">@{{cv_education_univ}}</strong> - <span class="title-addon">@{{cv_company_address}}</span> <i class="title-addon">@{{cv_experience_start_date}} - @{{cv_experience_end_date}}</i></h3>
+                <p>@{{cv_experience_item1}}<br/>@{{cv_experience_item2}}<br/>@{{cv_experience_item3}}</p>
+              </dl>
+              <dl class="no-border">
+                <span class="cv-sec">Skills</span>
+                <p>@{{cv_experience_item1}}<br/>@{{cv_experience_item2}}<br/>@{{cv_experience_item3}}</p>
+              </dl>
+            </article>
           </main><!--end cvs shelf-->
           <main ng-show="active_shelf==3">
             <h1><i class="icn fa fa-envelope"></i> Letters shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+            <article>
+            </article>
           </main><!--end letters shelf-->
           <main ng-show="active_shelf==4">
             <h1><i class="icn fa fa-globe"></i> Websites shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
@@ -209,19 +243,31 @@
     var app = angular.module('App', []);
       app.controller('Ctrl', function($scope) {
         $scope.first_name= "John";
-        $scope.second_name= "Doe";
+        $scope.second_name= "Kimani";
         $scope.title= "software engineer/ designer";
         $scope.telephone= "0724942245";
         $scope.email= "kimpita9@gmail.com";
         $scope.address= "Tokyo koganei shi kajinocho 1-9-32";
         $scope.website= "http://localhost:8000/new";
         //display variables
-        $scope.active_shelf = 1;
+        $scope.active_shelf = 2;
         $scope.shelf_items = 1;
         $scope.active_card_shelf_item=1;
         $scope.active_cv_shelf_item=1;
         $scope.active_letter_shelf_item=1;
         $scope.active_website_shelf_item=1;
+        //cv content
+        $scope.cv_objective="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
+        $scope.cv_experience_title="Computer Programmer";
+        $scope.cv_company="Excia East Africa Ltd";
+        $scope.cv_company_address="Nairobi, Kenya";
+        $scope.cv_experience_start_date="Jan-2017";
+        $scope.cv_experience_end_date="Feb-2018";
+        $scope.cv_experience_item1="-The standard Lorem Ipsum passage, used since the 1500";
+        $scope.cv_experience_item2="-Section 1.10.33 of de 'Finibus Bonorum et Malorum', written by Cicero in 45 BC";
+        $scope.cv_experience_item3="-1914 translation by H. Rackham";
+        $scope.cv_education_title="BSc. Information Technology";
+        $scope.cv_education_univ="Dedan Kimathi university";
       });
     </script>
   </body>
