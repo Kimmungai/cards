@@ -285,6 +285,27 @@ main .cv h3{
   padding-top: 1em;
   font-size: 1.5em;
 }
+main .letter{
+  width: 595px;
+  background-color: #fff;
+  margin: 1em auto;
+  padding: 1em;
+}
+main .letter address ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main .letter h2{
+  margin: 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main .letter p{
+  text-align: justify;
+}
 .cv-sec{
   font-size: 1em;
   color:#fff;

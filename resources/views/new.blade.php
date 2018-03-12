@@ -14,7 +14,7 @@
     <div  class="container"><!--start container-->
       <div class="row">
         <div class="col-md-12 no-padding">
-          <header>
+          <header ng-cloak>
             <!--<ul>
               <li class="pl1"><a href="#" class="brand"><i class="fa fa-desktop"></i> Digital PA</a></li>
             </ul>
@@ -42,7 +42,7 @@
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      peter njau
+                      @{{first_name}} @{{second_name}}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Account</a>
@@ -195,7 +195,21 @@
           </main><!--end cards shelf-->
           <main ng-show="active_shelf==2">
             <h1><i class="icn fa fa-file"></i> CVs shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
-            <article class="cv">
+            <div class="row controls" ng-show="active_cv_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-print"></span> Print</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_cv_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
+              </div>
+            </div>
+            <article class="cv" ng-show="active_cv_shelf_item==1">
               <dl>
                 <dt>
                   <h2 class="cv-theme-color">@{{first_name}} @{{second_name}}</h2>
@@ -227,11 +241,71 @@
                 <p>@{{cv_experience_item1}}<br/>@{{cv_experience_item2}}<br/>@{{cv_experience_item3}}</p>
               </dl>
             </article>
+            <div class="row controls" ng-show="active_cv_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-print"></span> Print</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_cv_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
+              </div>
+            </div>
+            <article class="cv" ng-show="active_cv_shelf_item==2">
+            </article>
+            <article class="cv" ng-show="active_cv_shelf_item==3">
+            </article>
           </main><!--end cvs shelf-->
           <main ng-show="active_shelf==3">
             <h1><i class="icn fa fa-envelope"></i> Letters shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
-            <article>
+            <div class="row controls" ng-show="active_letter_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-print"></span> Print</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_letter_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
+              </div>
+            </div>
+            <article class="letter" ng-show="active_letter_shelf_item==1">
+              <address>
+                <ul>
+                  <li>@{{letter_date | date:'dd MMMM yyyy'}}</li>
+                  <li>@{{letter_to}}</li>
+                  <li>@{{letter_to_org}}</li>
+                  <li>@{{letter_to_add}}</li>
+                </ul>
+              </address>
+              <h2>@{{letter_heading}}</h2></br>
+              <span>@{{letter_salutation}},</span></br>
+              <p>@{{letter_body}}</p>
+              <span>@{{letter_sign_off}},</span></br>
+              </br><span>@{{first_name}} @{{second_name}}</span></br>
+              <span>Enclosure: Resume</span></br>
             </article>
+            <div class="row controls" ng-show="active_letter_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-print"></span> Print</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_letter_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
+              </div>
+            </div>
           </main><!--end letters shelf-->
           <main ng-show="active_shelf==4">
             <h1><i class="icn fa fa-globe"></i> Websites shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
@@ -250,7 +324,7 @@
         $scope.address= "Tokyo koganei shi kajinocho 1-9-32";
         $scope.website= "http://localhost:8000/new";
         //display variables
-        $scope.active_shelf = 2;
+        $scope.active_shelf = 1;
         $scope.shelf_items = 1;
         $scope.active_card_shelf_item=1;
         $scope.active_cv_shelf_item=1;
@@ -268,6 +342,15 @@
         $scope.cv_experience_item3="-1914 translation by H. Rackham";
         $scope.cv_education_title="BSc. Information Technology";
         $scope.cv_education_univ="Dedan Kimathi university";
+        //letter content
+        $scope.letter_date = new Date();
+        $scope.letter_to = "John Makasi";
+        $scope.letter_to_org = "Nyeri waters and sewerage company";
+        $scope.letter_to_add = "P.O BOX 86-20107 NYERI";
+        $scope.letter_heading = "Re: Customer Service Representative Opening (Ref. ID: CS300-Denver)";
+        $scope.letter_salutation = "Dear Ms. Nogo";
+        $scope.letter_body = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+        $scope.letter_sign_off = "sincerely";
       });
     </script>
   </body>
