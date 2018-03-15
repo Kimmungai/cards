@@ -306,6 +306,22 @@ main .letter h2{
 main .letter p{
   text-align: justify;
 }
+main .website{
+  overflow: hidden;
+  background: #fff;
+}
+main .website header{
+  overflow: hidden;
+  background: #EEEEEE;
+}
+main .website .smooth{
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+}
+main .website header ul{
+}
 .cv-sec{
   font-size: 1em;
   color:#fff;

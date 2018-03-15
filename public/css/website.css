@@ -1,0 +1,288 @@
+.website nav{
+  background: #ffae00;
+  margin: 0 auto;
+}
+.website nav .menu-btn{
+  display: none;
+}
+.website nav .navbar-nav li{
+  padding: 0 1em;
+}
+.website .nav li a{
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #fff !important;
+    font-weight: bold;
+    outline: none;
+    text-align: center !important;
+}
+.website .profile-caption .social-media a .fa{
+    font-size: 24px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 10px 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.website .profile-caption .social-media a:hover .fa{
+    border-radius:0 10px;
+}
+.website .profile-caption .social-media a .fa-facebook:hover{
+    background: #305891
+}
+.website .profile-caption .social-media a .fa-twitter:hover {
+    background: #2ca8d2;
+}
+.website .profile-caption .social-media a .fa-google-plus:hover {
+    background: #e04a3b
+}
+.website .profile-caption .social-media a .fa-dribbble:hover {
+    background: #ec4e8b
+}
+.website .profile-caption .social-media a .fa-behance:hover {
+    background: #00a6ff
+}
+.website .profile-caption .social-media a .fa-linkedin:hover {
+    background: #0282b3
+}
+.website .profile-caption h2{
+    color: #000
+}
+
+.website .profile-caption .social-media a .fa{
+    color: #000;
+    border: 1px solid #000;
+}
+.website .profile-caption .social-media a:hover .fa{
+    color: #fff;
+    border: 1px solid #000;
+}
+.website .profile-image{
+    border-bottom: 1px solid #fff;
+}
+.website .profile-item{
+    margin-top: 16%;
+}
+.website .profile-caption h2 span{
+    text-transform: uppercase;
+    color: #ffae00;
+}
+.website .profile-caption{
+  padding: 0 1em;
+}
+.website .section-title{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    margin: 74px 0 52px;
+}
+
+.website .section-title h2{
+    color:#ffae00;
+    font-size: 35px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    margin:0 auto;
+    padding: 20px 0;
+}
+.website .section-title h2:before{
+    content: "";
+    display: block;
+    position: relative;
+    width: 50%;
+    height: 2px;
+    background: #ffae00;
+    margin: 0 auto;
+    text-align: center;
+    bottom: -69px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+.website .section-title h2:hover:before{
+    width: 100%;
+    bottom: -60px;
+}
+.website .about-me-box h2{
+    color: #ffae00;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 50px;
+}
+.website .about-me-box h2:before{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 10%;
+    bottom: 0;
+    position: absolute;
+    background:#ffae00;
+}
+.website .about-me-box p{
+    font-size: 14px;
+    color:#232323;
+    line-height: 24px;
+    font-weight: 300;
+    padding-right: 7%;
+}
+
+.website .about-me-box a{
+    padding: 0 15px 0 0;
+    color: #fff;
+    background:#ffae00;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    margin-top: 45px;
+    display: inline-block;
+}
+.website .skill-box h2{
+    color: #ffae00;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 50px;
+}
+.website .skill-box h2:before{
+    content: "";
+    display: block;
+    height: 2px;
+    width: 10%;
+    bottom: 0;
+    position: absolute;
+    background:#ffae00;
+}
+
+.website .skill-box p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+    margin: 20px 0 15px;
+}
+.website .progressbar{
+    position:relative;
+    display:block;
+    width:100%;
+    height:5px;
+}
+.website .progressbar:before{
+    position:absolute;
+    display:block;
+    content:"";
+    width:99%;
+    height:5px;
+    background:#bababa;
+}
+.website .bar {
+	position:absolute;
+	display:block;
+	width:0px;
+	height:5px;
+	top:0;
+	left:0;
+	background: #FFAE00;
+	overflow:hidden;
+}
+.website .bar.color2 {
+	background: #FFAE00;
+ }
+.website .bar.color3 {
+	background: #FFAE00;
+}
+.website .bar.color4 {
+	background: #FFAE00;
+}
+
+.website .bar:before {
+	position:absolute;
+	display:block;
+	content:"";
+	width:100%;
+	height:150%;
+	top:-25%;
+	left:-25px;
+	background: rgba(255,255,255,0);
+}
+.website .bar:after {
+	position:absolute;
+	display:block;
+	content:"";
+	width:64px;
+	height:16px;
+	right:0;
+	top:0;
+	border-radius: 0px 16px 16px 0px;
+	background:rgba(255,255,255,0);
+}
+.website .bar span {
+	position:absolute;
+	display:block;
+	width:100%;
+	height:5px;
+	top:0;
+	left:0;
+}
+.website .label {
+	position:absolute;
+	display:block;
+	width:40px;
+	height:25px;
+	line-height:20px;
+	top:-20px;
+	left:0px;
+	background:#FFAE00;
+    font-weight:400;
+	font-size:12px;
+	color:#fff;
+	text-align:center;
+    border-radius:10px 0px;
+}
+.website .label span {
+	position:absolute;
+	display:block;
+	width:12px;
+	height:9px;
+	top:-9px;
+	left:14px;
+	background:transparent;
+	overflow:hidden;
+}
+.website .label span:before {
+	position:absolute;
+	display:block;
+	content:"";
+	width:8px;
+	height:8px;
+	top:4px;
+	left:2px;
+	border:1px solid rgba(0,0,0,0.5);
+	background: rgb(86,86,86);
+	box-shadow: 0px -1px 2px 0px rgba(0, 0, 0, 0.15);
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.website .fa-cloud-download{
+    position: relative;
+    padding: 13px 16px;
+    margin-right: 15px;
+}
