@@ -369,34 +369,70 @@
                     <div class="skill-box">
                         <h2>SKILLS</h2>
                         <p>Adobe Photoshop</p>
-                        <div class="progressbar" data-perc="90">
-                          <div class="bar"><span></span></div>
-                          <div class="label wow bounceInLeft center animated"></div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 81%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">81%</div>
                         </div>
                         <p>Adobe Illastrator</p>
-                        <div class="progressbar" data-perc="80">
-                          <div class="bar color2"><span></span></div>
-                          <div class="label wow bounceInLeft center animated"></div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 72%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">72%</div>
                         </div>
                         <p>Html & Css</p>
-                        <div class="progressbar" data-perc="89">
-                          <div class="bar color3"><span></span></div>
-                          <div class="label wow bounceInLeft center animated"></div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 78%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">80%</div>
                         </div>
                         <p>Web Design</p>
-                        <div class="progressbar" data-perc="87">
-                          <div class="bar color4"><span></span></div>
-                          <div class="label wow bounceInLeft center animated"></div>
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">85%</div>
                         </div>
-                        <p>UI/UX Design</p>
-                        <div class="progressbar" data-perc="95">
-                          <div class="bar color4"><span></span></div>
-                          <div class="label wow bounceInLeft center animated"></div>
-                        </div>
-
                     </div><!-- end of /.skill bx -->
                 </div><!-- end of /.columns -->
               </div><!-- end of /.row -->
+              <div class="work-section">
+                <div class="container">
+                  <div class="row">
+                    <div class="section-title">
+                      <h2>MY AREAS OF SPECIALITY</h2><!-- section title -->
+                    </div>
+                    <div class="col-lg-6 mobile">
+                      <article class="mobile-design work-box">
+                          <i class="fa fa-mobile"></i><!-- icon -->
+                          <h3>Mobile app design</h3><!-- title -->
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                          <div class="dh-overlay"></div>
+                      </article>
+                    </div><!-- end of /.columns 1 -->
+                    <div class="col-lg-6 template ">
+                      <article class="template-design work-box">
+                          <i class="fa fa-laptop"></i><!-- icon -->
+                          <h3>Web Template Design</h3><!-- title -->
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                          <div class="dh-overlay"></div>
+                      </article>
+                    </div><!-- end of /.columns 1 -->
+                    <div class="col-lg-12 work-center-box">
+                      <div class="main-center-item">
+                          <span></span>
+                      </div>
+                    </div><!--end of main center columns-->
+                    <div class="col-lg-6 ui">
+                      <article class="ui-design work-box">
+                          <i class="fa fa-ils"></i><!-- icon -->
+                          <h3>Ui Design</h3><!-- title -->
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                          <div class="dh-overlay"></div>
+                      </article><!-- end of /.design box -->
+                    </div><!-- end columns 1 -->
+                    <div class="col-lg-6 landing wow">
+                      <article class="landing-page work-box">
+                          <i class="fa fa-clipboard dh-container"></i><!-- icon -->
+                          <h3>Landing page</h3><!-- title -->
+                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                          <div class="dh-overlay"></div>
+                      </article><!-- end of /.design box -->
+                    </div><!-- end columns 1 -->
+                  </div>
+                </div>
+              </div>
             </div>
           </main><!--end websites shelf-->
         </div>
