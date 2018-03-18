@@ -142,7 +142,7 @@
             <section class="desk" ng-show="shelf_items==4">
               <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Websites <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul class="mb3">
-                <li ng-class="active_website_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_letter_shelf_item=1" class="A">
+                <li ng-class="active_website_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_website_shelf_item=1" class="A">
                   <a href="#"><i class="fa fa-user-secret" aria-hidden="true"></i></a>
                 </li>
               </ul>
@@ -155,6 +155,20 @@
           </main><!--end websites shelf-->
           <main ng-show="active_shelf==1">
             <h1><i class="icn fa fa-book"></i> Cards shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
+            <div class="row controls" ng-show="active_card_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-print"></span> Print</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-share-alt"></span> Share</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_card_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
+              </div>
+            </div>
             <article class="container biz-card" ng-show="active_card_shelf_item==1">
               <h2>@{{first_name}} <span  class="text-danger">@{{second_name}}</span></h2>
               <h3>@{{title}}</h3>
@@ -308,9 +322,20 @@
               </div>
             </div>
           </main><!--end letters shelf-->
-          <main ng-show="active_shelf==4">
+          <main ng-show="active_shelf==4" class="bg-white">
             <h1><i class="icn fa fa-globe"></i> Websites shelf <span class="tag pull-right text-muted hidden-xs-down"><i class="fa fa-dashboard"></i> Dashboard</span></h1>
-            <div class="container website">
+            <div class="row controls" ng-show="active_website_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-globe"></span> Publish</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-edit"></span> Edit</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_website_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
+              </div>
+            </div>
+            <div class="container website" ng-show="active_website_shelf_item==1">
               <header>
                 <div class="row">
                   <nav class="navbar navbar-light navbar-toggleable-md">
@@ -326,10 +351,10 @@
                               <button class="menu-btn show-btn"></button>
                               <ul class="nav navbar-nav navbar-right">
                                   <li><a href="#home"  class="active">Home</a></li>
-                                  <li><a href="#about">About Me</a></li>
-                                  <li><a href="#service">My services</a></li>
-                                  <li><a href="#portfolio">Portfolio</a></li>
-                                  <li><a id="link" href="#contact">Contact</a></li>
+                                  <li><a href="#about-me">About Me</a></li>
+                                  <li><a href="#my-service">My services</a></li>
+                                  <li><a id="link" href="#contact-me">Contact</a></li>
+                                  <li></li>
                               </ul><!-- end of /.ul -->
                           </div><!-- end of /.navbar-collapse -->
 
@@ -354,7 +379,7 @@
                 </div><!--end of row-->
               </header>
               <div class="container row">
-                <div class="section-title">
+                <div class="section-title" id="about-me">
                     <h2>About Me</h2><!-- section title -->
                 </div>
                 <div class="col-lg-6">
@@ -387,51 +412,102 @@
                     </div><!-- end of /.skill bx -->
                 </div><!-- end of /.columns -->
               </div><!-- end of /.row -->
-              <div class="work-section">
+              <div class="work-section smoth">
                 <div class="container">
                   <div class="row">
-                    <div class="section-title">
+                    <div class="section-title" id="my-service">
                       <h2>MY AREAS OF SPECIALITY</h2><!-- section title -->
                     </div>
                     <div class="col-lg-6 mobile">
-                      <article class="mobile-design work-box">
-                          <i class="fa fa-mobile"></i><!-- icon -->
-                          <h3>Mobile app design</h3><!-- title -->
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
-                          <div class="dh-overlay"></div>
-                      </article>
+                        <article class="mobile-design work-box">
+                            <i class="fa fa-mobile"></i><!-- icon -->
+                            <h3>Mobile app design</h3><!-- title -->
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                            <div class="dh-overlay"></div>
+                        </article>
+
                     </div><!-- end of /.columns 1 -->
                     <div class="col-lg-6 template ">
-                      <article class="template-design work-box">
-                          <i class="fa fa-laptop"></i><!-- icon -->
-                          <h3>Web Template Design</h3><!-- title -->
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
-                          <div class="dh-overlay"></div>
-                      </article>
+                        <article class="template-design work-box">
+                            <i class="fa fa-laptop"></i><!-- icon -->
+                            <h3>Web Template Design</h3><!-- title -->
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                            <div class="dh-overlay"></div>
+                        </article>
+
                     </div><!-- end of /.columns 1 -->
+
                     <div class="col-lg-12 work-center-box">
-                      <div class="main-center-item">
-                          <span></span>
-                      </div>
+                        <div class="main-center-item">
+                            <div class="dot"></div>
+                        </div>
                     </div><!--end of main center columns-->
                     <div class="col-lg-6 ui">
-                      <article class="ui-design work-box">
-                          <i class="fa fa-ils"></i><!-- icon -->
-                          <h3>Ui Design</h3><!-- title -->
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
-                          <div class="dh-overlay"></div>
-                      </article><!-- end of /.design box -->
+                        <article class="ui-design work-box">
+                            <i class="fa fa-ils"></i><!-- icon -->
+                            <h3>Ui Design</h3><!-- title -->
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                            <div class="dh-overlay"></div>
+                        </article><!-- end of /.design box -->
+
                     </div><!-- end columns 1 -->
-                    <div class="col-lg-6 landing wow">
-                      <article class="landing-page work-box">
-                          <i class="fa fa-clipboard dh-container"></i><!-- icon -->
-                          <h3>Landing page</h3><!-- title -->
-                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
-                          <div class="dh-overlay"></div>
-                      </article><!-- end of /.design box -->
+                    <div class="col-lg-6 landing ">
+                        <article class="landing-page work-box">
+                            <i class="fa fa-clipboard dh-container"></i><!-- icon -->
+                            <h3>Landing page</h3><!-- title -->
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text </p><!-- caption -->
+                            <div class="dh-overlay"></div>
+                        </article><!-- end of /.design box -->
+
                     </div><!-- end columns 1 -->
-                  </div>
+                  </div><!--End of rows-->
                 </div>
+              </div><!--end work-section -->
+              <div class="row contact-section">
+                <div class="row container">
+                  <div class="section-title" id="contact-me">
+                      <h2>GET IN TOUCH</h2>
+                  </div><!-- contact title -->
+                  <div class="form-area">
+                    <form role="form">
+                      <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-user"></i> </div>
+            						<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            					</div>
+                      <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-envelope-o"></i> </div>
+            						<input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            					</div>
+                      <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-mobile"></i> </div>
+            						<input type="number" class="form-control" id="phone" name="phone" placeholder="Your Phone">
+            					</div>
+                      <div class="input-group">
+                        <textarea class="form-control" type="textarea" id="message" placeholder="Your Message" cols="50"></textarea>
+                      </div>
+                      <button type="button" id="submit" name="submit" class="form-submit">Send</button>
+                    </form>
+                  </div><!--end form area-->
+              </div><!--end form container-->
+              <footer class="footer-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p>Copyright 2015   | @{{first_name}} @{{second_name}} | All Rights Reserved |  Designed & Developed by  <a href="http://themencoder.com/">Voffice</a> </p>
+                        </div><!-- coloumn -->
+                    </div><!-- end of row -->
+                </div><!-- end of /. container -->
+            </footer><!-- end of /. footer section -->
+            </div>
+            <div class="row controls" ng-show="active_website_shelf_item==1">
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-globe"></span> Publish</a>
+              </div>
+              <div class="col-xs-3 ml-5">
+                <a class="" href="#"><span class="fa fa-edit"></span> Edit</a>
+              </div>
+              <div class="col-xs-3 ml-5" ng-click="active_website_shelf_item=0">
+                <a class="" href="#"><span class="fa fa-times"></span> close</a>
               </div>
             </div>
           </main><!--end websites shelf-->
@@ -449,8 +525,8 @@
         $scope.address= "Tokyo koganei shi kajinocho 1-9-32";
         $scope.website= "http://localhost:8000/new";
         //display variables
-        $scope.active_shelf = 4;
-        $scope.shelf_items = 4;
+        $scope.active_shelf = 1;
+        $scope.shelf_items = 1;
         $scope.active_card_shelf_item=1;
         $scope.active_cv_shelf_item=1;
         $scope.active_letter_shelf_item=1;

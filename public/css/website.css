@@ -220,6 +220,7 @@
     z-index: 99;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .website .work-section .work-box h3{
@@ -260,19 +261,19 @@
 .website .work-section .work-box:hover p{
     color: #fff
 }
-.website .work-section .template{
+.website  .template{
     float: right;
 }
-.website .work-section .template-design{
+.website  .template-design{
     float: right;
     width: 64%;
     text-align: center;
     border-bottom: 1px solid #f4f4f4;
 }
-.website .work-section .mobile{
+.website  .mobile{
     float: right;
 }
-.website .work-section .mobile-design{
+.website  .mobile-design{
     float: left;
     width: 64%;
     text-align: center;
@@ -280,24 +281,23 @@
     border-right: none;
 }
 
-.website .work-section .work-center-box{
+.website  .work-center-box{
     position: relative;
-    display: none;
 }
-.website .work-section .main-center-item{
+.website  .main-center-item{
     height: 86px;
     width: 86px;
     border-radius: 50%;
     border: 3px solid rgba(204, 204, 204, 0.9);
     text-align: center;
     margin: 0 auto;
-    left: 46.3%;
+    left: 44.7%;
     position: absolute;
     top:-44px;
     background: #fff;
-    z-index: 9999
+    z-index: 9999;
 }
-.work-section .main-center-item span{
+.website .main-center-item .dot{
     height: 10px;
     width: 10px;
     text-align: center;
@@ -307,15 +307,89 @@
     margin-top: 43%;
 }
 
-.work-section .ui-design{
+.website .ui-design{
     float: right;
     width: 64%;
     text-align: center;
     border-right: 1px solid #f4f4f4
 }
-.work-section .landing-page{
+.website .landing-page{
     float: left;
     width: 64%;
     text-align: center;
     border-right:none;
+}
+.website .smoth{
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+}
+.website .contact-section{
+    background: url(../img/contact-bg.jpg)  no-repeat fixed;
+    background-position: center;
+    background-size: 100% 100%;
+    margin: 0 auto;
+}
+.website .form-area
+{
+  width: 100%;
+  padding: 10px 40px 60px;
+  margin: 0 auto;
+}
+.website .form-control{
+    height: 60px;
+    border: 1px solid #fff !important;
+    border-radius:0px !important;
+    background: transparent !important;
+    border-left: none !important;
+    color: #fff;
+}
+.website .input-group-addon{
+    height:60px;
+    width: 60px;
+    text-align: center;
+    background: #ffae00;
+    border: none !important;
+    border-radius: 0px !important;
+    color: #fff;
+}
+.website .input-group-addon i{
+    font-size: 24px
+}
+.website .input-group{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.website .form-submit{
+    border: none;
+    background: #ffae00;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+#message{
+    border: 1px solid #fff !important;
+    padding: 2.6% 3%;
+    height: 150px;
+}
+.website .footer-section{
+    background: #000;
+    text-align: center;
+    padding: 50px 0;
+    width: 100%;
+}
+.website .footer-section p{
+    color: #bcbbbb;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-align: center;
+}
+.website  .footer-section p a{
+    color: #ffae00;
 }
