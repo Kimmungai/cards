@@ -322,6 +322,27 @@ main .website .smooth{
 }
 main .website header ul{
 }
+.edit-pane{
+  width: 100%;
+  overflow: hidden;
+  /* background-color: #ff0000;*/
+  position: fixed; /* or absolute */
+  top: 6%;
+}
+.edit-form-sec{
+  background: #fff;
+  border: 1px solid #46C1FD;
+  border-radius: 5px;
+}
+.edit-form-sec h2{
+  text-align: center;
+  font-size: 1.4em;
+  margin: 1em 0;
+}
+.edit-form-sec form{
+  width: 80%;
+  margin: 0 auto;
+}
 .cv-sec{
   font-size: 1em;
   color:#fff;
