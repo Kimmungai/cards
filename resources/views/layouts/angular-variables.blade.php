@@ -10,22 +10,54 @@ var app = angular.module('App', []);
     $scope.website= "http://localhost:8000/new";
     $scope.bar_code_url= "http://localhost:8000/new";
     //display variables
-    $scope.active_shelf = 1;
-    $scope.shelf_items = 1;
+    $scope.active_shelf = 2;
+    $scope.shelf_items = 2;
     $scope.active_card_shelf_item=1;
     $scope.active_cv_shelf_item=1;
     $scope.active_letter_shelf_item=1;
     $scope.active_website_shelf_item=1;
     //cv content
     $scope.cv_objective="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.";
-    $scope.cv_experience_title="Computer Programmer";
-    $scope.cv_company="Excia East Africa Ltd";
-    $scope.cv_company_address="Nairobi, Kenya";
-    $scope.cv_experience_start_date="Jan-2017";
-    $scope.cv_experience_end_date="Feb-2018";
-    $scope.cv_experience_item1="-The standard Lorem Ipsum passage, used since the 1500";
-    $scope.cv_experience_item2="-Section 1.10.33 of de 'Finibus Bonorum et Malorum', written by Cicero in 45 BC";
-    $scope.cv_experience_item3="-1914 translation by H. Rackham";
+      //Experience
+      $scope.cv_experience_title_1="Computer Programmer";
+      $scope.cv_company_1="Excia East Africa Ltd";
+      $scope.cv_company_address_1="Nairobi, Kenya -";
+      $scope.cv_experience_start_date_1="Jan-2017 -";
+      $scope.cv_experience_end_date_1="Feb-2018";
+      $scope.cv_experience_item1_1="-The standard Lorem Ipsum passage, used since the 1500";
+      $scope.cv_experience_item2_1="-Section 1.10.33 of de 'Finibus Bonorum et Malorum', written by Cicero in 45 BC";
+      $scope.cv_experience_item3_1="-1914 translation by H. Rackham";
+
+      $scope.cv_experience_title_2="Musician";
+      $scope.cv_company_2="Tpf ";
+      $scope.cv_company_address_2="Nairobi, Kenya -";
+      $scope.cv_experience_start_date_2="Jan-2015 -";
+      $scope.cv_experience_end_date_2="Feb-2019";
+      $scope.cv_experience_item1_2="-The standard Lorem Ipsum passage, used since the 1500";
+      $scope.cv_experience_item2_2="-Section 1.10.33 of de 'Finibus Bonorum et Malorum', written by Cicero in 45 BC";
+      $scope.cv_experience_item3_2="-1914 translation by H. Rackham";
+      $scope.cv_experience_2=0;
+
+      $scope.cv_experience_title_3="Mukami";
+      $scope.cv_company_3="Excia East Africa Ltd ";
+      $scope.cv_company_address_3="Nairobi, Kenya -";
+      $scope.cv_experience_start_date_3="Jan-2017 -";
+      $scope.cv_experience_end_date_3="Feb-2018";
+      $scope.cv_experience_item1_3="-The standard Lorem Ipsum passage, used since the 1500";
+      $scope.cv_experience_item2_3="-Section 1.10.33 of de 'Finibus Bonorum et Malorum', written by Cicero in 45 BC";
+      $scope.cv_experience_item3_3="-1914 translation by H. Rackham";
+      $scope.cv_experience_3=0;
+
+      $scope.cv_experience_title_4="mkimbizi";
+      $scope.cv_company_4="Excia East Africa Ltd ";
+      $scope.cv_company_address_4="Nairobi, Kenya -";
+      $scope.cv_experience_start_date_4="Jan-2017 -";
+      $scope.cv_experience_end_date_4="Feb-2018";
+      $scope.cv_experience_item1_4="-The standard Lorem Ipsum passage, used since the 1500";
+      $scope.cv_experience_item2_4="-Section 1.10.33 of de 'Finibus Bonorum et Malorum', written by Cicero in 45 BC";
+      $scope.cv_experience_item3_4="-1914 translation by H. Rackham";
+      $scope.cv_experience_4=0;
+
     $scope.cv_education_title="BSc. Information Technology";
     $scope.cv_education_univ="Dedan Kimathi university";
     //letter content
@@ -89,6 +121,8 @@ var app = angular.module('App', []);
 
     //Edit items variables
     $scope.edit_card = 0;
-    $scope.edit_cv = 0;
+    $scope.edit_cv_basic = 0;
+    $scope.edit_cv_objective = 0;
+    $scope.edit_cv_experience = 0;
   });
 </script>

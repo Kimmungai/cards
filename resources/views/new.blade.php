@@ -62,7 +62,7 @@
     <div class="col-xs-3 ml-5">
       <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
     </div>
-    <div class="col-xs-3 ml-5" ng-click="edit_cv=1">
+    <div class="col-xs-3 ml-5" ng-click="edit_cv_basic=1">
       <a class="" href="#"><span class="fa fa-edit"></span> Edit</a>
     </div>
     <div class="col-xs-3 ml-5" ng-click="active_cv_shelf_item=0">
@@ -70,7 +70,7 @@
     </div>
   </div>
   <article class="cv" ng-show="active_cv_shelf_item==1">
-    <dl>
+    <dl ng-class="edit_cv_basic==1 ? 'active_cv_area' : 'inactive'" ng-click="edit_cv_basic=1;edit_cv_objective=0;edit_cv_experience=0">
       <dt>
         <h2 class="cv-theme-color">@{{first_name}} @{{second_name}}</h2>
       </dt>
@@ -83,14 +83,23 @@
         </ul>
       </dd>
     </dl>
-    <dl>
+    <dl ng-class="edit_cv_objective==1 ? 'active_cv_area' : 'inactive'" ng-click="edit_cv_objective=1;edit_cv_basic=0;edit_cv_experience=0">
       <span class="cv-sec">Objective</span>
       <p>@{{cv_objective}}</p>
     </dl>
-    <dl>
+    <dl ng-class="edit_cv_experience==1 ? 'active_cv_area' : 'inactive'" ng-click="edit_cv_experience=1;edit_cv_basic=0;edit_cv_objective=0">
       <span class="cv-sec">Experience</span>
-      <h3><span class="cv-theme-color"> @{{cv_experience_title}}</span> <strong class="title-addon">@{{cv_company}}</strong> - <span class="title-addon">@{{cv_company_address}}</span> <i class="title-addon">@{{cv_experience_start_date}} - @{{cv_experience_end_date}}</i></h3>
-      <p>@{{cv_experience_item1}}<br/>@{{cv_experience_item2}}<br/>@{{cv_experience_item3}}</p>
+      <h3><span class="cv-theme-color"> @{{cv_experience_title_1}}</span> <strong class="title-addon">@{{cv_company_1}}</strong><span class="title-addon">@{{cv_company_address_1}}</span> <i class="title-addon">@{{cv_experience_start_date_1}}@{{cv_experience_end_date_1}}</i></h3>
+      <p>@{{cv_experience_item1_1}}<br/>@{{cv_experience_item2_1}}<br/>@{{cv_experience_item3_1}}</p>
+
+      <h3 ng-if="cv_experience_2==1"><span class="cv-theme-color"> @{{cv_experience_title_2}}</span> <strong class="title-addon">@{{cv_company_2}}</strong><span class="title-addon">@{{cv_company_address_2}}</span> <i class="title-addon">@{{cv_experience_start_date_2}}@{{cv_experience_end_date_2}}</i></h3>
+      <p ng-if="cv_experience_2==1">@{{cv_experience_item1_2}}<br/>@{{cv_experience_item2_2}}<br/>@{{cv_experience_item3_2}}</p>
+
+      <h3 ng-if="cv_experience_3==1"><span class="cv-theme-color"> @{{cv_experience_title_3}}</span> <strong class="title-addon">@{{cv_company_3}}</strong><span class="title-addon">@{{cv_company_address_3}}</span> <i class="title-addon">@{{cv_experience_start_date_3}}@{{cv_experience_end_date_3}}</i></h3>
+      <p ng-if="cv_experience_3==1">@{{cv_experience_item1_3}}<br/>@{{cv_experience_item2_3}}<br/>@{{cv_experience_item3_3}}</p>
+
+      <h3 ng-if="cv_experience_4==1"><span class="cv-theme-color"> @{{cv_experience_title_4}}</span> <strong class="title-addon">@{{cv_company_4}}</strong><span class="title-addon">@{{cv_company_address_4}}</span> <i class="title-addon">@{{cv_experience_start_date_4}}@{{cv_experience_end_date_4}}</i></h3>
+      <p ng-if="cv_experience_4==1">@{{cv_experience_item1_4}}<br/>@{{cv_experience_item2_4}}<br/>@{{cv_experience_item3_4}}</p>
     </dl>
     <dl>
       <span class="cv-sec">Education</span>
@@ -109,7 +118,7 @@
     <div class="col-xs-3 ml-5">
       <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
     </div>
-    <div class="col-xs-3 ml-5" ng-click="edit_cv=1">
+    <div class="col-xs-3 ml-5" ng-click="edit_cv_basic=1">
       <a class="" href="#"><span class="fa fa-edit"></span> Edit</a>
     </div>
     <div class="col-xs-3 ml-5" ng-click="active_cv_shelf_item=0">
