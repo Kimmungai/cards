@@ -45,19 +45,17 @@
           <aside ng-cloak>
             <ul class="shelf-icons">
               <li ng-class="active_shelf==1 ? 'active' : 'inactive'" ng-click="active_shelf=1;shelf_items=1"><a href="#"><i class="fa fa-book"></i></a></li>
-              <li ng-class="active_shelf==2 ? 'active' : 'inactive'" ng-click="active_shelf=2;shelf_items=2"><a href="#"><i class="fa fa-file"></i></a></li>
               <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-share-alt"></i></a></li>
               <li ng-class="active_shelf==4 ? 'active' : 'inactive'" ng-click="active_shelf=4;shelf_items=4"><a href="#"><i class="fa fa-globe"></i></a></li>              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
             </ul>
             <ul class="shelves">
               <li ng-click="active_shelf=1;shelf_items=1"><a href="#">My cards</a></li>
-              <li ng-click="active_shelf=2;shelf_items=2"><a href="#">Templates</a></li>
               <li ng-click="active_shelf=3;shelf_items=3"><a href="#"> Share</a></li>
               <li ng-click="active_shelf=4;shelf_items=4"><a href="#"> Help</a></li>
             </ul>
             <section class="desk" ng-show="shelf_items==1">
               <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
-              <ul>
+              <ul class="mb3">
                 <li ng-class="active_card_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="A">
                   <a href="#"><i class="fa fa-address-card" aria-hidden="true"></i></a>
                 </li>
@@ -65,22 +63,22 @@
                   <a href="#"><i class="fa fa-plane" aria-hidden="true" title="wamjai"></i></a>
                 </li>
               </ul>
-              <ul>
+              <!--<ul class="mb3">
                 <li ng-class="active_card_shelf_item==3 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=3" class="C">
                   <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
                 </li>
                 <li ng-class="active_card_shelf_item==4 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=4" class="D">
                   <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
                 </li>
-              </ul>
-              <ul class="mb3">
+              </ul>-->
+              <!--<ul class="mb3">
                 <li ng-class="active_card_shelf_item==5 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=5" class="E">
                   <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
                 <li ng-class="active_card_shelf_item==6 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=6" class="F">
                   <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
-              </ul>
+              </ul>-->
             </section><!--end cards shelf items-->
           </aside>
         </div><!--end of aside section-->
@@ -101,6 +99,23 @@
           <span class="close" ng-click="edit_card=0"><i class="fa fa-close" aria-hidden="true"></i></span>
           <h2><i class="fa fa-edit" aria-hidden="true"></i> Card edit panel</h2>
           <form>
+            <div class="form-group">
+              <label for="first_name">Theme</label>
+              <div class="row">
+                <div class="col-sm-3">
+                  <a href="#" class="btn btn-primary"></a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="#" class="btn btn-danger"></a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="#" class="btn btn-warning"></a>
+                </div>
+                <div class="col-sm-3">
+                  <a href="#" class="btn btn-info"></a>
+                </div>
+              </div>
+            </div>
             <div class="form-group">
               <label for="first_name">First name</label>
               <input type="text" class="form-control" id="first_name" placeholder="E.g. Peter" ng-model="first_name">
@@ -134,7 +149,7 @@
               <input type="text" class="form-control" id="website" placeholder="" ng-model="website">
             </div>
             <div class="form-group">
-              <a class="btn btn-success" href="#" ng-click="edit_card=0"><span class="fa fa-thumbs-up"></span> Done</a>
+              <a class="" href="#" ng-click="edit_card=0"><span class="fa fa-thumbs-up"></span> Done</a>
             </div>
          </form>
         </div>
@@ -182,7 +197,6 @@
       </div>
     </div>
   </div><!--edit cv experience panel ends here-->
-
-    @extends('layouts.angular-variables')
+  @extends('layouts.angular-variables')
   </body>
 </html>

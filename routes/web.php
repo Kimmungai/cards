@@ -10,13 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('home');
-});
-Route::get('/', function () {
-    return view('virtual_office');
-});
-Route::get('/new', function () {
     return view('new');
 });
