@@ -14,30 +14,21 @@
   <body>
     <div  class="container"><!--start of app container-->
       <div class="row"><!--start of header section-->
-        <div class="col-md-12 no-padding">
           <header class="bg-dark" ng-cloak>
             <div class="container">
               <div class="row">
-                <div class="col-sm-8 affix">
+                <div class="col-sm-8">
                   <h1 class="text-warning"><a href="/">BiznessKit</a></h1>
                 </div>
-                <div class="col-sm-4 affix">
-                    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <span class="fa fa-user"></span> @{{first_name}} @{{second_name}}
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Account</a>
-                          <a class="dropdown-item" href="#"><i class="fa fa-unlink"></i> Logout</a>
-                        </div>
-                      </li>
+                <div class="col-sm-4">
+                    <ul class="list-inline account-nav">
+                      <li class="list-inline-item"><a href="#"><span class="fa fa-user"></span> @{{cards[0].first_name}} @{{cards[0].second_name}}</a></li>
+                      <li class="list-inline-item"><a href="#"><span class="fa fa-unlink"></span> logout</a></li>
                     </ul>
                 </div>
               </div>
             </div>
           </header>
-        </div>
       </div><!--end of header section-->
 
       <div class="row"><!--start of row dividing screen into two-->
@@ -45,23 +36,25 @@
           <aside ng-cloak>
             <ul class="shelf-icons">
               <li ng-class="active_shelf==1 ? 'active' : 'inactive'" ng-click="active_shelf=1;shelf_items=1"><a href="#"><i class="fa fa-book"></i></a></li>
-              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-share-alt"></i></a></li>
-              <li ng-class="active_shelf==4 ? 'active' : 'inactive'" ng-click="active_shelf=4;shelf_items=4"><a href="#"><i class="fa fa-globe"></i></a></li>              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
-            </ul>
+              <li ng-class="active_shelf==2 ? 'active' : 'inactive'" ng-click="active_shelf=2;shelf_items=2"><a href="#"><i class="fa fa-share-alt"></i></a></li>
+              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-globe"></i></a></li>              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
+              <li ng-class="active_shelf==4 ? 'active' : 'inactive'" ng-click="active_shelf=4;shelf_items=4"><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>
+           </ul>
             <ul class="shelves">
-              <li ng-click="active_shelf=1;shelf_items=1"><a href="#">My cards</a></li>
-              <li ng-click="active_shelf=3;shelf_items=3"><a href="#"> Share</a></li>
-              <li ng-click="active_shelf=4;shelf_items=4"><a href="#"> Help</a></li>
+              <li ng-click="active_shelf=1;shelf_items=1"><a href="#">Card</a></li>
+              <li ng-click="active_shelf=2;shelf_items=1"><a href="#"> Share</a></li>
+              <li ng-click="active_shelf=3;shelf_items=1"><a href="#"> Help</a></li>
+              <li><a class="text-danger"  href="#"> Create new card</a></li>
             </ul>
             <section class="desk" ng-show="shelf_items==1">
-              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> Cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> All cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul class="mb3">
-                <li ng-class="active_card_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="A">
+                <li ng-repeat="card in cards" ng-class="active_card_shelf_item==card.card_id ? 'active' : 'inactive'" ng-click="active_card_shelf_item=card.card_id" class="@{{card.card_code}}">
                   <a href="#"><i class="fa fa-address-card" aria-hidden="true"></i></a>
                 </li>
-                <li ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=2" class="B">
+                <!--<li ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=2" class="B">
                   <a href="#"><i class="fa fa-plane" aria-hidden="true" title="wamjai"></i></a>
-                </li>
+                </li>-->
               </ul>
               <!--<ul class="mb3">
                 <li ng-class="active_card_shelf_item==3 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=3" class="C">

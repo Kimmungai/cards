@@ -10,9 +10,6 @@
     <div class="col-xs-3 ml-5">
       <a class="" href="#"><span class="fa fa-print"></span> Print</a>
     </div>
-    <div class="col-xs-3 ml-5">
-      <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
-    </div>
     <div class="col-xs-3 ml-5" ng-click="edit_card=1">
       <a  href="#"><span class="fa fa-edit"></span> Edit</a>
     </div>
@@ -20,8 +17,8 @@
       <a class="" href="#"><span class="fa fa-times"></span> close</a>
     </div>
   </div>
-  <article class="container biz-card" ng-show="active_card_shelf_item==1">
-    <h2>@{{first_name}} <span  class="text-danger">@{{second_name}}</span></h2>
+  <article ng-repeat="card in cards" class="container biz-card" ng-show="active_card_shelf_item==1">
+    <h2>@{{card.first_name}} <span  class="text-danger">@{{card.second_name}}</span></h2>
     <h3>@{{title}}</h3>
     <div class="row">
         <div class="bar2 bg-danger"></div>
@@ -30,19 +27,16 @@
     </div>
       <div class="card-details">
         <ul>
-          <li><span class="fa fa-phone-square"> @{{telephone}}</span></li>
-          <li><span class="fa fa-envelope"> @{{email}}</span></li>
-          <li><span class="fa fa-map-marker"> @{{address}}</span></li>
-          <li><span class="fa fa-globe"> @{{website}}</span></li>
+          <li><span class="fa fa-phone-square"> @{{card.telephone}}</span></li>
+          <li><span class="fa fa-envelope"> @{{card.email}}</span></li>
+          <li><span class="fa fa-map-marker"> @{{card.address}}</span></li>
+          <li><span class="fa fa-globe"> @{{card.website}}</span></li>
         </ul>
       </div>
   </article>
   <div class="row controls" ng-show="active_card_shelf_item==1">
     <div class="col-xs-3 ml-5">
       <a class="" href="#"><span class="fa fa-print"></span> Print</a>
-    </div>
-    <div class="col-xs-3 ml-5">
-      <a class="" href="#"><span class="fa fa-telegram"></span> Mail</a>
     </div>
     <div class="col-xs-3 ml-5" ng-click="edit_card=1">
       <a  href="#"><span class="fa fa-edit"></span> Edit</a>
