@@ -49,29 +49,10 @@
             <section class="desk" ng-show="shelf_items==1">
               <h2><i class="fa fa-folder-open" aria-hidden="true"></i> All cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul class="mb3">
-                <li ng-repeat="card in cards" ng-class="active_card_shelf_item==card.card_id ? 'active' : 'inactive'" ng-click="active_card_shelf_item=card.card_id" class="@{{card.card_code}}">
+                <li ng-repeat="card in cards" ng-class="active_card_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="@{{card.card_code}}">
                   <a href="#"><i class="fa fa-address-card" aria-hidden="true"></i></a>
                 </li>
-                <!--<li ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=2" class="B">
-                  <a href="#"><i class="fa fa-plane" aria-hidden="true" title="wamjai"></i></a>
-                </li>-->
               </ul>
-              <!--<ul class="mb3">
-                <li ng-class="active_card_shelf_item==3 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=3" class="C">
-                  <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
-                </li>
-                <li ng-class="active_card_shelf_item==4 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=4" class="D">
-                  <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
-                </li>
-              </ul>-->
-              <!--<ul class="mb3">
-                <li ng-class="active_card_shelf_item==5 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=5" class="E">
-                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <li ng-class="active_card_shelf_item==6 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=6" class="F">
-                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-              </ul>-->
             </section><!--end cards shelf items-->
           </aside>
         </div><!--end of aside section-->
@@ -111,7 +92,7 @@
             </div>
             <div class="form-group">
               <label for="first_name">First name</label>
-              <input type="text" class="form-control" id="first_name" placeholder="E.g. Peter" ng-model="first_name">
+              <input type="text" class="form-control" id="first_name" placeholder="E.g. Peter" ng-model="cards[0].first_name">
             </div>
             <div class="form-group">
               <label for="second_name">Last name</label>

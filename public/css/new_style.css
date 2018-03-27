@@ -349,6 +349,13 @@ main .website header ul{
   width: 80%;
   margin: 0 auto;
 }
+.item-controls{
+  text-align: center;
+  margin-top: 1em;
+}
+.item-controls li{
+  padding: 0 1em;
+}
 .cv-sec{
   font-size: 1em;
   color:#fff;
