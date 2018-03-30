@@ -36,13 +36,13 @@
           <aside ng-cloak>
             <ul class="shelf-icons">
               <li ng-class="active_shelf==1 ? 'active' : 'inactive'" ng-click="active_shelf=1;shelf_items=1"><a href="#"><i class="fa fa-book"></i></a></li>
-              <li ng-class="active_shelf==2 ? 'active' : 'inactive'" ng-click="active_shelf=2;shelf_items=2"><a href="#"><i class="fa fa-share-alt"></i></a></li>
-              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-globe"></i></a></li>              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
+              <li ng-class="active_shelf==2 ? 'active' : 'inactive'" ng-click="active_shelf=2;shelf_items=2"><a href="#"><i class="fa fa-bullseye"></i></a></li>
+              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-question"></i></a></li>              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
               <li ng-class="active_shelf==4 ? 'active' : 'inactive'" ng-click="active_shelf=4;shelf_items=4"><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>
            </ul>
             <ul class="shelves">
               <li ng-click="active_shelf=1;shelf_items=1"><a href="#">Card</a></li>
-              <li ng-click="active_shelf=2;shelf_items=1"><a href="#"> Share</a></li>
+              <li ng-click="active_shelf=2;shelf_items=1"><a href="#"> Theme</a></li>
               <li ng-click="active_shelf=3;shelf_items=1"><a href="#"> Help</a></li>
               <li><a class="text-danger"  href="#"> Create new card</a></li>
             </ul>
