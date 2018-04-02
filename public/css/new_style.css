@@ -119,7 +119,7 @@ aside .add-shelf a{
   transform:  rotate(0deg) skewY(-45deg);
 }
  .desk ul li a:after{
-  content: '';
+  content: 'nyau';
   position: absolute;
   bottom: -20px;
   left: -10px;
@@ -128,6 +128,7 @@ aside .add-shelf a{
   background: #b1b1b1;
   transition: .5s;
   transform:  rotate(0deg) skewX(-45deg);
+  line-height: 20px;
 }
  .desk ul li a:hover{
   transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
@@ -424,14 +425,26 @@ main .website header ul{
 .desk .A a:before{
  content: 'A';
 }
+.desk .A a:after{
+ content: 'Web';
+}
 .desk .B a:before{
  content: 'B';
+}
+.desk .B a:after{
+ content: 'Card';
 }
 .desk .C a:before{
  content: 'C';
 }
+.desk .C a:after{
+ content: 'CV';
+}
 .desk .D a:before{
  content: 'D';
+}
+.desk .D a:after{
+ content: 'Letter';
 }
 .desk .E a:before{
  content: 'E';

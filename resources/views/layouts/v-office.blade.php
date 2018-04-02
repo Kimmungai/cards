@@ -37,20 +37,41 @@
             <ul class="shelf-icons">
               <li ng-class="active_shelf==1 ? 'active' : 'inactive'" ng-click="active_shelf=1;shelf_items=1"><a href="#"><i class="fa fa-book"></i></a></li>
               <li ng-class="active_shelf==2 ? 'active' : 'inactive'" ng-click="active_shelf=2;shelf_items=2"><a href="#"><i class="fa fa-bullseye"></i></a></li>
-              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-question"></i></a></li>              <!--<li><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>-->
-              <li ng-class="active_shelf==4 ? 'active' : 'inactive'" ng-click="active_shelf=4;shelf_items=4"><a class="text-danger" href="#"><i class="fa fa-plus-circle"></i></a></li>
+              <li ng-class="active_shelf==3 ? 'active' : 'inactive'" ng-click="active_shelf=3;shelf_items=3"><a href="#"><i class="fa fa-question"></i></a></li>
            </ul>
             <ul class="shelves">
-              <li ng-click="active_shelf=1;shelf_items=1"><a href="#">Card</a></li>
-              <li ng-click="active_shelf=2;shelf_items=1"><a href="#"> Theme</a></li>
+              <li ng-click="active_shelf=1;shelf_items=1"><a href="#">Website</a></li>
+              <li ng-click="active_shelf=2;shelf_items=1"><a href="#">
+                <div class="row">
+                  <div class="col-sm-3">
+                    <a href="#" class="btn btn-primary"></a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a href="#" class="btn btn-danger"></a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a href="#" class="btn btn-warning"></a>
+                  </div>
+                </div>
+              </a></li>
               <li ng-click="active_shelf=3;shelf_items=1"><a href="#"> Help</a></li>
-              <li><a class="text-danger"  href="#"> Create new card</a></li>
             </ul>
             <section class="desk" ng-show="shelf_items==1">
-              <h2><i class="fa fa-folder-open" aria-hidden="true"></i> All cards <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
+              <h2><i class="fa fa-briefcase" aria-hidden="true"></i> My tools <span class="close" ng-click="shelf_items=0; active_shelf=0"><i class="fa fa-close" aria-hidden="true"></i></span></h2>
               <ul class="mb3">
                 <li ng-repeat="card in cards" ng-class="active_card_shelf_item==1 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="@{{card.card_code}}">
+                  <a href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li  ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="B">
                   <a href="#"><i class="fa fa-address-card" aria-hidden="true"></i></a>
+                </li>
+              </ul>
+              <ul>
+                <li  ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="C">
+                  <a href="#"><i class="fa fa-file" aria-hidden="true"></i></a>
+                </li>
+                <li  ng-class="active_card_shelf_item==2 ? 'active' : 'inactive'" ng-click="active_card_shelf_item=1" class="D">
+                  <a href="#"><i class="fa fa-list-alt" aria-hidden="true"></i></a>
                 </li>
               </ul>
             </section><!--end cards shelf items-->
